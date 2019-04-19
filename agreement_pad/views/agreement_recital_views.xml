@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="agreement_recital_pad_form" model="ir.ui.view">
+      <field name="name">Agreement recital pad Form</field>
+      <field name="model">agreement.recital</field>
+      <field name="inherit_id" ref="agreement.agreement_recital_form"/>
+      <field name="arch" type="xml">
+        <field name="content" position="replace">
+           <field name="recital_pad_url" widget="pad" class="oe_memo"/>
+            <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </field>
+      </field>
+    </record>
+
+</odoo>

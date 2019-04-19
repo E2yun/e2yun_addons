@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="partner_agreement_section_pad_form" model="ir.ui.view">
+      <field name="name">Agreement section pad Form</field>
+      <field name="model">agreement.section</field>
+      <field name="inherit_id" ref="agreement.partner_agreement_section_form_view"/>
+      <field name="arch" type="xml">
+        <field name="content" position="replace">
+           <field name="section_pad_url" widget="pad" class="oe_memo"/>
+            <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </field>
+      </field>
+    </record>
+
+</odoo>
